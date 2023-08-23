@@ -14,7 +14,7 @@ function App() {
     <Router>
       <Layout>
         <Routes>
-          <Route exact path="/" render={() => <Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/cart" component={Cart} />
           <Route path="/product" render={(props) => <Product {...props} />} />
           <Route path="/checkout" component={Checkout} />
