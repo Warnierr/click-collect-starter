@@ -13,10 +13,11 @@ const styles = {
 // main
 function Gallery() {
   const { loading, error, data } = useQuery(
-    GET_PRODUCTS, { variables : {category : "women"},
+    GET_PRODUCTS, { 
+      variables : {category : "women"},
   });
   if (loading) return <div>loading ...</div>
-  if (error) return <div>sorry an error occured {error}</div>
+  //if (error) return <div>sorry an error occured {error}</div>
   console.dir(data);
     return(<div className="col-md-8 order-md-2 col-lg-9">
       <div className="container-fluid" style={styles.gallery}>
