@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache} from "@apollo/client";
+import FiltersProvider from "./context";
 import App from "./App";
 
 const client = new ApolloClient({
@@ -11,7 +12,9 @@ const client = new ApolloClient({
 ReactDOM.render(
   <React.StrictMode>
       <ApolloProvider client={client}>
+        <FiltersProvider>
     <App />
+    </FiltersProvider>
   </ApolloProvider>,
   </React.StrictMode>,
   document.getElementById("root")

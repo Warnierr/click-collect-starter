@@ -1,17 +1,18 @@
 import React from 'react'
 import Sidebar from './Sidebar'
 import Gallery from './Gallery'
+import { withContext } from '../../context';
 
-function Home() {
+function Home({ value}) {
     return (
     <section className="pt-5 pb-5">
         <div className="container">
           <div className="row">
-            <Sidebar />
+            <Sidebar {...value}/>
             <Gallery />
          </div>
         </div>
       </section>
     );
   }
-  export default Home
+  export default withContext(Home);
