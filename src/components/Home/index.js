@@ -9,7 +9,7 @@ function Home({ value }) {
         <div className="container">
           <div className="row">
             <Sidebar {...value}/>
-            <Gallery />
+            <Gallery {...value}/>
          </div>
         </div>
       </section>

@@ -11,10 +11,10 @@ const styles = {
 }
 
 // main
-function Gallery() {
+function Gallery({ category }) {
   const { loading, error, data } = useQuery(
     GET_PRODUCTS, { 
-      variables : {category : "accessories"},
+      variables : {category : category},
   });
   if (loading) return <div>loading ...</div>
   if (error) return <div>sorry an error occured {error}</div>
