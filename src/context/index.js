@@ -11,7 +11,7 @@ const FiltersProvider = ({ children }) => {
         Bottom: false, 
         Jacket: false,
     });
-    const updateFilters = (e) => {};
+    const updateFilters = (e) => setFiltersChecked(prevState => ({...prevState, [e.target.name]: e.target.checked}));
     const value = React.useMemo(() => {
         return {
             categories,
