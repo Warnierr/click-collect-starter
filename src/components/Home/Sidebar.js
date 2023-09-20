@@ -10,7 +10,7 @@ function Sidebar({ categories, filters }) {
       <div className="divider mt-5 mb-5 border-bottom border-secondary"></div> 
       <h6 className="text-uppercase font-weight-bold mb-3">Filters</h6>
       {filters.map((filter, index) => (
-      <Filters.Filter key={index} name={filter} />
+      <Filters.Filter key={index} name={filter.toLowerCase()} />
       ))}
     </div>)
 }

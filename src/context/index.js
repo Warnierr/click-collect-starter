@@ -4,8 +4,8 @@ export const Context = React.createContext();
 const FiltersProvider = ({ children }) => {
     const categories = ["Women", "Men", "Kids", "Accessories"];
     const filters = ['Top', 'Bottom', 'Jacket'];
-    const [category, setCategory] = React.useState(categories[0].toLowerCase());
-    const updateCategory = (value) => setCategory(value.toLowerCase());
+    const [category, setCategory] = React.useState(categories[0].toLowerCase());//categories[0].toLowerCase()
+    const updateCategory = (value) => setCategory(value.toLowerCase());//value.toLowerCase()
     const [filtersChecked, setFiltersChecked] = React.useState({
         Top: false, 
         Bottom: false, 

@@ -15,7 +15,7 @@ const Filters = {
             value={name}
             className="custom-control-input"
             id={name}
-            checked={category === name}
+            checked={category === name.toLowerCase()}
           />
           &nbsp;
           <label className="custom-control-label" for={name}>
