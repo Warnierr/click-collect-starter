@@ -26,12 +26,13 @@ const Filters = {
     );
   },
   Filter: function ({ name }) {
+    const { updateFilters } = React.useContext(Context);
     return (
       <div className="mt-2 mb-2 pl-2">
         <div className="custom-control custom-checkbox">
           <input
             name={name}
-            onChange={() => {}}
+            onChange={updateFilters}
             type="checkbox"
             className="custom-control-input"
             id={name}
